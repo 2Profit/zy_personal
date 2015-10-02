@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import com.zy.common.entity.BaseEntity;
 import com.zy.member.entity.Member;
 /**
- * ÓÃ»§»ı·ÖĞÅÏ¢±í
+ * ç”¨æˆ·ç§¯åˆ†ä¿¡æ¯è¡¨
  * 
  * @author Jeff Xu
  *
