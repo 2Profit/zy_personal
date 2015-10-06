@@ -25,6 +25,7 @@ public class MemBankInfo extends BaseEntity{
 	private String bankAccount;//银行账户
 	private String bankCardNum;//银行账号
 	private String bankAddress;//银行地址
+	private String bankPhotoUrl;//银行卡照片
 	
 	@Column(length=64)
 	public String getBankAccount() {
@@ -57,5 +58,14 @@ public class MemBankInfo extends BaseEntity{
 	public void setMember(Member member) {
 		this.member = member;
 	}
+	
+	@Column(length=64)
+	public String getBankPhotoUrl() {
+		return bankPhotoUrl;
+	}
+	public void setBankPhotoUrl(String bankPhotoUrl) {
+		this.bankPhotoUrl = bankPhotoUrl;
+	}
 
+	
 }
