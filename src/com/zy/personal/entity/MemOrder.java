@@ -18,16 +18,26 @@ import com.zy.member.entity.Member;
 @Table(name = "mem_order")
 public class MemOrder extends BaseEntity{
 
-	public static final Integer payTypeAlipay = 0;
-	public static final Integer payTypeWeChat = 1;
-	
 	public static final Integer statusNoPay = 0;
 	public static final Integer statusPaySuccess = 1;
 	public static final Integer statusPayFail = 2;
+	public static final Integer statusPerson = 3;
 	
 	private static final long serialVersionUID = 5147576410248508819L;
 
 	private Member member;
+
+	private String accountNum;		//账号
+	
+	private String curType;			//币种 	0虚拟币、1真实币
+	
+	private double amount;			//金额
+	
+	private Integer payType;		//支付方式	0支付宝 、1微信、2银行、3人工添加
+	
+	private Integer status;			//状态 0未支付、1支付成功、2支付失败、3人工添加
+
+	private String msg;				//备注
 
 	@ManyToOne
 	@JoinColumn(name="member_id")
@@ -38,18 +48,6 @@ public class MemOrder extends BaseEntity{
 	public void setMember(Member member) {
 		this.member = member;
 	}
-
-	private String accountNum;		//账号
-	
-	private String curType;			//币种
-	
-	private double amount;			//金额
-	
-	private Integer payType;		//支付方式
-	
-	private Integer status;			//状态 0未支付、1支付成功、2支付失败
-
-	private String msg;				//备注
 	
 	@Column(name="cur_type", length=64)
 	public String getCurType() {

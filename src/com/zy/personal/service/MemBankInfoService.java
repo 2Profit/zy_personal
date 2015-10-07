@@ -12,4 +12,9 @@ public class MemBankInfoService extends CommonService<MemBankInfo,String>{
 
 	@Autowired
 	private MemBankInfoDao memBankInfoDao;
+	
+	@Autowired
+	public void setMemBankInfoDao(MemBankInfoDao memBankInfoDao){
+		super.setCommonDao(memBankInfoDao);
+	}
 }

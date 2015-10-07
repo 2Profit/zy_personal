@@ -20,8 +20,6 @@ public class MemBankInfo extends BaseEntity{
 
 	private static final long serialVersionUID = -5912885273347712648L;
 
-	private Member member;
-	
 	private String bankAccount;//银行账户
 	private String bankCardNum;//银行账号
 	private String bankAddress;//银行地址
@@ -49,16 +47,6 @@ public class MemBankInfo extends BaseEntity{
 		this.bankAddress = bankAddress;
 	}
 
-	@ManyToOne
-	@JoinColumn(name="member_id")
-	public Member getMember() {
-		return member;
-	}
-
-	public void setMember(Member member) {
-		this.member = member;
-	}
-	
 	@Column(length=64)
 	public String getBankPhotoUrl() {
 		return bankPhotoUrl;
