@@ -22,6 +22,8 @@ public class MemPay extends BaseEntity{
 	private Member member;
 	
 	private MemOrder memOrder;
+
+	private String payId;			//支付编码
 	
 	private Integer status;			//1支付成功 2支付失败
 
@@ -52,6 +54,15 @@ public class MemPay extends BaseEntity{
 
 	public void setStatus(Integer status) {
 		this.status = status;
+	}
+
+	@Column(name="pay_id")
+	public String getPayId() {
+		return payId;
+	}
+
+	public void setPayId(String payId) {
+		this.payId = payId;
 	}
 	
 }

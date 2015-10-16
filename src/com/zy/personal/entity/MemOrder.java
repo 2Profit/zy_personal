@@ -21,21 +21,16 @@ public class MemOrder extends BaseEntity{
 	public static final Integer statusNoPay = 0;
 	public static final Integer statusPaySuccess = 1;
 	public static final Integer statusPayFail = 2;
-	public static final Integer statusPerson = 3;
 	
 	private static final long serialVersionUID = 5147576410248508819L;
 
 	private Member member;
 
-	private String accountNum;		//账号
-	
-	private String curType;			//币种 	0虚拟币、1真实币
-	
 	private double amount;			//金额
 	
-	private Integer payType;		//支付方式	0支付宝 、1微信、2银行、3人工添加
+	private Integer payType;		//支付方式	0支付宝 、1微信、2银行
 	
-	private Integer status;			//状态 0未支付、1支付成功、2支付失败、3人工添加
+	private Integer status;			//状态 0未支付、1支付成功、2支付失败
 
 	private String msg;				//备注
 
@@ -49,15 +44,6 @@ public class MemOrder extends BaseEntity{
 		this.member = member;
 	}
 	
-	@Column(name="cur_type", length=64)
-	public String getCurType() {
-		return curType;
-	}
-
-	public void setCurType(String curType) {
-		this.curType = curType;
-	}
-
 	@Column(name="amount")
 	public double getAmount() {
 		return amount;
@@ -94,13 +80,4 @@ public class MemOrder extends BaseEntity{
 		this.msg = msg;
 	}
 
-	@Column(name="account_num")
-	public String getAccountNum() {
-		return accountNum;
-	}
-
-	public void setAccountNum(String accountNum) {
-		this.accountNum = accountNum;
-	}
-	
 }
