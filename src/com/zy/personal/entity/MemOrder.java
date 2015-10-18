@@ -24,6 +24,8 @@ public class MemOrder extends BaseEntity{
 	
 	private static final long serialVersionUID = 5147576410248508819L;
 
+	private String orderId;			//订单号
+	
 	private Member member;
 
 	private double amount;			//金额
@@ -33,6 +35,15 @@ public class MemOrder extends BaseEntity{
 	private Integer status;			//状态 0未支付、1支付成功、2支付失败
 
 	private String msg;				//备注
+
+	@Column(name="order_id")
+	public String getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(String orderId) {
+		this.orderId = orderId;
+	}
 
 	@ManyToOne
 	@JoinColumn(name="member_id")
