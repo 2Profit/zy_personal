@@ -20,9 +20,9 @@ public class MemBankInfo extends BaseEntity{
 
 	private static final long serialVersionUID = -5912885273347712648L;
 
-	private String bankAccount;//银行账户
+	private String bankAccount;//银行账户  改成  银行名称
 	private String bankCardNum;//银行账号
-	private String bankAddress;//银行地址
+	private String bankAddress;//银行地址		改成 账户持有人姓名
 	private String bankPhotoUrl;//银行卡照片
 	
 	@Column(name = "bank_account", length=64)
